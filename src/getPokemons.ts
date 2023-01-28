@@ -1,13 +1,13 @@
 import type { PokemonData } from "./types.js";
 
+let pokeInfo;
+
 export const getPokemonData = async (id: number) => {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
-  const pokeInfo = (await response.json()) as PokemonData;
-  console.log(pokeInfo.name);
-  console.log(pokeInfo.weight);
+  pokeInfo = (await response.json()) as PokemonData;
 
-  return pokeInfo.height;
+  return pokeInfo;
 };
 
 export default getPokemonData;
