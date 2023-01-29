@@ -14,3 +14,17 @@ const section = new SectionComponent(
   "pokemon_card-container"
 );
 section.render();
+
+const pokemonList = new Component(section.element, "ul", "pokemon-list");
+pokemonList.render();
+
+const selectedPokemonData = async () => {
+  const allPokemonDataFromApi = await getPokemonFromApi(20);
+
+  const individualPokemon = allPokemonDataFromApi.map((pokemon) => {
+    const card = new CardComponent(pokemonList.element, pokemon);
+    return card;
+  });
+};
+
+(async () => selectedPokemonData())();

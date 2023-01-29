@@ -3,8 +3,8 @@ import type { PokemonData } from "./types";
 export const getPokemonFromApi = async (id: number) => {
   const allPokemons = [];
 
-  for (let i = 1; i <= id; i++) {
-    const id = i;
+  for (let pokemonId = 1; pokemonId <= id; pokemonId++) {
+    const id = pokemonId;
     const getPokemonData = fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     allPokemons.push(getPokemonData);
   }
