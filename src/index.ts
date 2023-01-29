@@ -1,19 +1,16 @@
 import { CardComponent } from "./components/Component/CardComponent/CardComponent.js";
 import { Component } from "./components/Component/Component.js";
+import { SectionComponent } from "./components/Component/SectionComponent/SectionComponent.js";
 import { getPokemonFromApi } from "./utils/getPokemonData.js";
 
-export const main = document.querySelector(".main");
+const { body } = document;
 
-const newThinghy = new Component(main, "div", "workin'");
-newThinghy.render();
+const container = new Component(body, "div", "container");
+container.render();
 
-const selectedPokemonData = async () => {
-  const allPokemonDataFromApi = await getPokemonFromApi(20);
-
-  const individualPokemon = allPokemonDataFromApi.map((pokemon) => {
-    const card = new CardComponent(main, pokemon);
-    return card;
-  });
-};
-
-(async () => selectedPokemonData())();
+const section = new SectionComponent(
+  container.element,
+  "section",
+  "pokemon_card-container"
+);
+section.render();

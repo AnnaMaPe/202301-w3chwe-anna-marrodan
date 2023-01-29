@@ -14,6 +14,6 @@ export class CardComponent extends Component implements CardComponentStructure {
   render() {
     super.render();
 
-    this.element.innerHTML = `<img class= cardimage-${this.className}src="${this.information.sprites.other.dream_world.front_default}"><h2>${this.information.name}</h2>`;
+    this.element.innerHTML = `<img class= cardimage-${this.className} src="${this.information.sprites.other.dream_world.front_default}"><h2>${this.information.name}</h2>`;
   }
 }
