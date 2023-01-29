@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 100%;
+}
+
+h3 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0 2em 0 2em;
+}
+
+.container {
+  display: flex;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card {
+  border: solid 1px black;
+  border-radius: 10%;
+}
+
+.card-image {
+  width: 15em;
+  height: 15em;
+  padding: 1em;
+}
+
+.card-type-bug {
+  background-color: #ffe1c0;
+}
+
+.card-type-grass {
+  background-color: #b5f0cd;
+}
+
+.card-type-water {
+  background-color: #aac4ff;
+}
+
+.card-type-fire {
+  background-color: #ffcba1;
+}
+
+.card-type-normal {
+  background-color: #dea512;
+}
+
+.card__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-information__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
