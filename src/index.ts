@@ -1,9 +1,12 @@
 import { CardComponent } from "./components/Component/CardComponent/CardComponent.js";
 import { Component } from "./components/Component/Component.js";
+import { HeaderComponent } from "./components/Component/HeaderComponent/HeaderComponent.js";
 import { SectionComponent } from "./components/Component/SectionComponent/SectionComponent.js";
 import { getPokemonFromApi } from "./utils/getPokemonData.js";
 
 const { body } = document;
+const header = new HeaderComponent(body, "header", "header");
+header.render();
 
 const container = new Component(body, "div", "container");
 container.render();

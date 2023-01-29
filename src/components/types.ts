@@ -6,5 +6,5 @@ export interface ComponentStructure {
 }
 
 export interface CardComponentStructure {
-  information: PokemonData;
+  pokemon: PokemonData;
 }
