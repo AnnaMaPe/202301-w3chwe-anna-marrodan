@@ -6,7 +6,11 @@ export class CardComponent extends Component implements CardComponentStructure {
   pokemon: PokemonData;
 
   constructor(parentElement: Element, information: PokemonData) {
-    super(parentElement, "li", `card card-${information.types[0].type.name}`);
+    super(
+      parentElement,
+      "li",
+      `card card-type-${information.types[0].type.name}`
+    );
     this.pokemon = information;
     this.render();
   }
@@ -14,7 +18,7 @@ export class CardComponent extends Component implements CardComponentStructure {
   render() {
     super.render();
 
-    this.element.innerHTML = `<div class=card__image><img class= card-image src="${this.pokemon.sprites.other.dream_world.front_default}"></div>
+    this.element.innerHTML = `<div class=card__image><img class=card-image alt="${this.pokemon.name}" width=150 heigth=150 src="${this.pokemon.sprites.other.dream_world.front_default}"></div>
     <h3>${this.pokemon.name}</h3>
     <div class=card__information>
       <ul class= card-information__list>
