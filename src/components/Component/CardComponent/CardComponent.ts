@@ -26,5 +26,3 @@ export class CardComponent extends Component implements CardComponentStructure {
     </div>`;
   }
 }
-
-// <img src="img/no-one.jpg" alt="Character's Name and family" class="character__picture card-img-top">

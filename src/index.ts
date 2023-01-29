@@ -23,7 +23,7 @@ pokemonList.render();
 (async () => {
   const allPokemonDataFromApi = await getPokemonFromApi(21);
 
-  const individualPokemon = allPokemonDataFromApi.map((pokemon) => {
+  allPokemonDataFromApi.map((pokemon) => {
     const card = new CardComponent(pokemonList.element, pokemon);
     return card;
   });
