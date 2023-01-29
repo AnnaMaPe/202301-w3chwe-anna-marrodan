@@ -19,8 +19,8 @@ export class CardComponent extends Component implements CardComponentStructure {
     super.render();
 
     this.element.innerHTML = `<div class=card__image><img class=card-image alt="${this.pokemon.name}" width=150 heigth=150 src="${this.pokemon.sprites.other.dream_world.front_default}"></div>
-    <h3>${this.pokemon.name}</h3>
     <div class=card__information>
+    <h3>${this.pokemon.name}</h3>
       <ul class= card-information__list>
         <li>Nº${this.pokemon.id}</li>
         <li>Weight: ${this.pokemon.weight}</li>
