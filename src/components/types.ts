@@ -1,4 +1,4 @@
-import type { PokemonData } from "../utils/types";
+import type { PokemonData } from "../utils/types.js";
 
 export interface ComponentStructure {
   element: Element;
