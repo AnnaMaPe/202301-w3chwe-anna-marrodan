@@ -12,7 +12,7 @@ export interface PokemonData {
   ];
   sprites: {
     other: {
-      "official-artwork": {
+      dream_world: {
         front_default: string;
       };
     };
