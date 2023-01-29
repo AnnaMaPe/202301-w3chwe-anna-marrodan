@@ -20,6 +20,17 @@ li {
   padding: 0 2em 0 2em;
 }
 
+header {
+  display: flex;
+  margin: 0.2rem;
+  justify-content: center;
+}
+
+.pokemon-logo {
+  width: 20rem;
+  height: 10rem;
+}
+
 .container {
   display: flex;
 }
