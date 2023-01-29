@@ -24,5 +24,6 @@ export class CardComponent extends Component implements CardComponentStructure {
         <li>Type: ${this.pokemon.types[0].type.name}</li>   
       </ul>
     </div>`;
+    return this.element.innerHTML;
   }
 }
